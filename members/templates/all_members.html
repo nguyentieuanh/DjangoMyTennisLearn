@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+    My Tennis Club - List of all members
+{% endblock %}
+
+{% block content %}
+    <h1>Members of Club</h1>
+    <ul>
+        {% for x in mymembers %} <!--Django tags, nois cho Django bieu dien nhung logic statement trong nay-->
+            <li><a href="details/{{ x.id }}">{{ x.firstName }} {{ x.lastName }}</a></li>
+        {% endfor %}
+    </ul>
+    <p>Back to <a href="/">Main</a></p>
+{% endblock %}
+
+
